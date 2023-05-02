@@ -13,5 +13,58 @@ let userNameInProgress = userNameInput.replace(/\d+/g, '');
 
 let userName = userNameInProgress.charAt(0).toUpperCase() + userNameInProgress.slice(1);
 
-alert(`Hi ${userName}, welcome to the site!`);
+alert(`Hi ${userName}, welcome to the site! Let's play a game, answer the following question yes, no, y, or n.`);
 
+function greetUser(userName) {
+  document.write(`Hello ${userName}`)
+} 
+
+function homeState() {
+  let homeStateGuess = prompt('Am I from Colorado originally?').toLowerCase();
+  if (homeStateGuess === 'n' || homeStateGuess ==='no') {
+    alert('Wow, yes I am actually from California!');
+    document.write('<span id="homeStateCorrect">California</span>');
+  } else {
+    document.write('<span id="homeStateWrong">California</span>');
+  }
+}
+
+function currentState() {
+  let currentStateGuess = prompt('Do I live in Washington Currently?').toLowerCase();
+  if (currentStateGuess === 'n' || currentStateGuess ==='no') {
+    alert('Wow, yes I am actually live in Virginia!');
+    document.write('<span id="currentStateCorrect">Virginia</span>');
+  } else {
+    document.write('<span id="currentStateWrong">Virginia</span>');
+  }
+}
+
+function favoriteShow() {
+  let favoriteShowGuess = prompt('Am I a huge Star Trek fan?').toLowerCase();
+  if (favoriteShowGuess === 'y' || favoriteShowGuess ==='yes') {
+    alert('Yep! Total Trekkie!');
+    document.write('<span id="nx01Correct">It\'s been a long road, geting from there to here.</span>');
+  } else {
+    document.write('<span id="nx01Wrong">It\'s been a long road, geting from there to here.</span>');
+  }
+} 
+
+function jobEstimate() {
+  let jobEstimate = prompt('Was my job in Washinton Permanent?').toLowerCase();
+  if (jobEstimate === 'n' || jobEstimate ==='no') {
+    alert('Right! It was supposed to only be 3 weeks!');
+    document.write('<span id="jobEstimateCorrect">3 weeks</span>');
+  } else {
+    document.write('<span id="jobEstimateWrong">3 weeks</span>');
+  }
+} 
+
+function jobLength() {
+  let jobLength = prompt('Did my job last 4 years?').toLowerCase();
+  if (jobLength === 'y' || jobLength ==='yes') {
+    alert('Yep! 3 weeks turned to 4 years.');
+    document.write('<span id="jobLengthCorrect">4 years</span>');
+  } else {
+    document.write('<span id="jobLengthWrong">4 years</span>');
+  }
+} 

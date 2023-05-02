@@ -1,3 +1,73 @@
 body {
-  background-color: darkcyan;
+  background-color: #635985;
+}
+
+h1 {
+  color: white;
+  font-size: 3vw;
+  font-weight: 600;
+  padding: 1.5vw 1vw;
+}
+
+h3 {
+  color: white;
+  font-size: 1.5vw;
+  font-weight: 500;
+  padding: 1vw 1.5vw;
+}
+
+p {
+  color: white;
+  margin: 2em 4em;
+  font-size: 18px;
+}
+
+#homeStateCorrect {
+  color: green;
+  background-color: black;
+}
+
+#homeStateWrong {
+  color: red;
+  background-color: black;
+}
+
+#currentStateCorrect {
+  color: green;
+  background-color: black;
+}
+
+#currentStateWrong {
+  color: red;
+  background-color: black;
+}
+
+#nx01Correct {
+  color: green;
+  background-color: black;
+}
+
+#nx01Wrong {
+  color: red;
+  background-color: black;
+}
+
+#jobEstimateCorrect {
+  color: green;
+  background-color: black;
+}
+
+#jobEstimateWrong {
+  color: red;
+  background-color: black;
+}
+
+#jobLengthCorrect {
+  color: green;
+  background-color: black;
+}
+
+#jobLengthWrong {
+  color: red;
+  background-color: black;
 }
