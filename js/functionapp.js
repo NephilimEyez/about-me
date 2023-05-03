@@ -14,54 +14,58 @@ let userNameInProgress = userNameInput.replace(/\d+/g, '');
 
 let userName = userNameInProgress.charAt(0).toUpperCase() + userNameInProgress.slice(1);
 
-let correctCounter = 0;
-
 alert(`Hi ${userName}, welcome to the site! Let's play a game, answer the following question yes, no, y, or n.`);
 
-let homeStateGuess = prompt('Am I from Colorado originally?').toLowerCase();
+function greetUser(userName) {
+  document.write(`Hello ${userName}`)
+} 
+
+function homeState() {
+  let homeStateGuess = prompt('Am I from Colorado originally?').toLowerCase();
   if (homeStateGuess === 'n' || homeStateGuess ==='no') {
     alert('Wow, yes I am actually from California!');
-    correctCounter++;
+    document.write('<span id="homeStateCorrect">California</span>');
   } else {
-    alert('Sorry! I\'m afraid I\'m from California.');
+    document.write('<span id="homeStateWrong">California</span>');
   }
+}
 
+function currentState() {
   let currentStateGuess = prompt('Do I live in Washington Currently?').toLowerCase();
   if (currentStateGuess === 'n' || currentStateGuess ==='no') {
     alert('Wow, yes I am actually live in Virginia!');
-    correctCounter++;
+    document.write('<span id="currentStateCorrect">Virginia</span>');
   } else {
-    alert('Sorry, no. I currently live in Virginia.');
+    document.write('<span id="currentStateWrong">Virginia</span>');
   }
+}
 
+function favoriteShow() {
   let favoriteShowGuess = prompt('Am I a huge Star Trek fan?').toLowerCase();
   if (favoriteShowGuess === 'y' || favoriteShowGuess ==='yes') {
     alert('Yep! Total Trekkie!');
-    correctCounter++;
+    document.write('<span id="nx01Correct">It\'s been a long road, geting from there to here.</span>');
   } else {
-    alert('Sorry, huge Trekkie here!')
+    document.write('<span id="nx01Wrong">It\'s been a long road, geting from there to here.</span>');
   }
+} 
 
+function jobEstimate() {
   let jobEstimate = prompt('Was my job in Washinton Permanent?').toLowerCase();
   if (jobEstimate === 'n' || jobEstimate ==='no') {
     alert('Right! It was supposed to only be 3 weeks!');
-    correctCounter++;
+    document.write('<span id="jobEstimateCorrect">3 weeks</span>');
   } else {
-    alert('I was in contract work, it was only slated for 3 weeks!');
+    document.write('<span id="jobEstimateWrong">3 weeks</span>');
   }
+} 
 
-  let jobLength = prompt('Did my Washinton job end up lasting 4 years?').toLowerCase();
-  if (jobLength === 'y' || jobLength ==='yes') {
-    alert('Yep! 3 weeks turned in to 4 years!');
-    correctCounter++;
+function jobLength() {
+  let jobEstimate = prompt('Was my job in Washinton Permanent?').toLowerCase();
+  if (jobEstimate === 'n' || jobEstimate ==='no') {
+    alert('Right! It was supposed to only be 3 weeks!');
+    document.write('<span id="jobEstimateCorrect">3 weeks</span>');
   } else {
-    alert('Actually yea, the job went from 3 weeks to 4 years.');
+    document.write('<span id="jobEstimateWrong">3 weeks</span>');
   }
-
-  if (correctCounter === 5){
-    alert('Wow 5/5?! We should be best friends! You wanna get bunk beds?!');
-  } else if (correctCounter === 0) {
-    alert('Sometimes I don\'t feel like you know me at all!');
-  } else {
-    alert(`Well ${userName}, ${correctCounter}/5 isn\'t too bad!`)
-  }
+} 
