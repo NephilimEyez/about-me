@@ -58,10 +58,48 @@ let homeStateGuess = prompt('Am I from Colorado originally?').toLowerCase();
     alert('Actually yea, the job went from 3 weeks to 4 years.');
   }
 
-  if (correctCounter === 5){
-    alert('Wow 5/5?! We should be best friends! You wanna get bunk beds?!');
+  for (let i = 0; i < 4; i++){
+    let favNumGuess = prompt(`${userName}, can you guess my favorite number? Try: ${i+1} out of 4`);
+    let favNumCleaned = Number(favNumGuess);
+    if (i == 3){
+      alert(`Sorry ${userName}, my favorite number is 13!`);
+    } else if (favNumCleaned < 13){
+      alert('Higher')
+    } else if (favNumCleaned > 13){
+      alert('Lower')
+    } else if (favNumCleaned === 13) {
+      alert('Wow! Yep 13 is my favorite number. Weird one huh?');
+      correctCounter++
+      break;
+    } 
+  }
+
+let topTenCounter = 0;
+
+let topTen = ['almond danish','tri-tip','refund policy','polish hot dog','rotisserie chicken','cheesecake','pesto','5 layer chocolate cake','parmesean','ribs']
+
+for (let i = 0; i < 6; i++){
+  let costco = prompt(`Hey ${userName}, can you guess one of my top ten items from Costco? I'll give you six gueses! You've used ${topTenCounter} so far`).toLowerCase();
+  
+  for (let j = 0; j < topTen.length; j++){
+    if (costco === topTen[j]) {
+      alert(`Holy crap, yep that's one of my favorites! ${topTen} all made the list`);
+      correctCounter++;
+      i = 6;
+      break;
+    }
+  }
+  if (i < 5) {
+    alert('Sorry no that did not make my list.');
+  } else if (i === 5) {
+    alert(`Sorry none of those made my list. ${topTen} all made the list`);
+  }
+}
+
+  if (correctCounter === 7){
+    alert('Wow 7/7?! We should be best friends! You wanna get bunk beds?!');
   } else if (correctCounter === 0) {
     alert('Sometimes I don\'t feel like you know me at all!');
   } else {
-    alert(`Well ${userName}, ${correctCounter}/5 isn\'t too bad!`)
+    alert(`Well ${userName}, ${correctCounter}/7 isn\'t too bad!`)
   }
