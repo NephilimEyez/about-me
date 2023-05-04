@@ -16,6 +16,13 @@ let userName = userNameInProgress.charAt(0).toUpperCase() + userNameInProgress.s
 
 alert(`Hi ${userName}, welcome to the site! Let's play a game, answer the following question yes, no, y, or n.`);
 
+greetUser();
+homeState();
+currentState();
+favoriteShow();
+jobEstimate();
+jobLength();
+
 function greetUser(userName) {
   document.write(`Hello ${userName}`);
 }
