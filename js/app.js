@@ -74,12 +74,10 @@ let homeStateGuess = prompt('Am I from Colorado originally?').toLowerCase();
     } 
   }
 
-let topTenCounter = 0;
-
 let topTen = ['almond danish','tri-tip','refund policy','polish hot dog','rotisserie chicken','cheesecake','pesto','5 layer chocolate cake','parmesean','ribs']
 
 for (let i = 0; i < 6; i++){
-  let costco = prompt(`Hey ${userName}, can you guess one of my top ten items from Costco? I'll give you six gueses! You've used ${topTenCounter} so far`).toLowerCase();
+  let costco = prompt(`Hey ${userName}, can you guess one of my top ten items from Costco? I'll give you six gueses! You've used ${i} so far`).toLowerCase();
   
   for (let j = 0; j < topTen.length; j++){
     if (costco === topTen[j]) {
