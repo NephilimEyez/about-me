@@ -18,68 +18,78 @@ let correctCounter = 0;
 
 alert(`Hi ${userName}, welcome to the site! Let's play a game, answer the following question yes, no, y, or n.`);
 
-let homeStateGuess = prompt('Am I from Colorado originally?').toLowerCase();
-  if (homeStateGuess === 'n' || homeStateGuess ==='no') {
+function homeState() {
+  let homeStateGuess = prompt('Am I from Colorado originally?').toLowerCase();
+  if (homeStateGuess === 'n' || homeStateGuess === 'no') {
     alert('Wow, yes I am actually from California!');
     correctCounter++;
   } else {
     alert('Sorry! I\'m afraid I\'m from California.');
   }
+}
 
+function currentState() {
   let currentStateGuess = prompt('Do I live in Washington Currently?').toLowerCase();
-  if (currentStateGuess === 'n' || currentStateGuess ==='no') {
+  if (currentStateGuess === 'n' || currentStateGuess === 'no') {
     alert('Wow, yes I am actually live in Virginia!');
     correctCounter++;
   } else {
     alert('Sorry, no. I currently live in Virginia.');
   }
+}
 
+function favoriteShow() {
   let favoriteShowGuess = prompt('Am I a huge Star Trek fan?').toLowerCase();
-  if (favoriteShowGuess === 'y' || favoriteShowGuess ==='yes') {
+  if (favoriteShowGuess === 'y' || favoriteShowGuess === 'yes') {
     alert('Yep! Total Trekkie!');
     correctCounter++;
   } else {
-    alert('Sorry, huge Trekkie here!')
+    alert('Sorry, huge Trekkie here!');
   }
+}
 
+function jobEstimate() {
   let jobEstimate = prompt('Was my job in Washinton Permanent?').toLowerCase();
-  if (jobEstimate === 'n' || jobEstimate ==='no') {
+  if (jobEstimate === 'n' || jobEstimate === 'no') {
     alert('Right! It was supposed to only be 3 weeks!');
     correctCounter++;
   } else {
     alert('I was in contract work, it was only slated for 3 weeks!');
   }
+}
 
+function jobLength() {
   let jobLength = prompt('Did my Washinton job end up lasting 4 years?').toLowerCase();
-  if (jobLength === 'y' || jobLength ==='yes') {
+  if (jobLength === 'y' || jobLength === 'yes') {
     alert('Yep! 3 weeks turned in to 4 years!');
     correctCounter++;
   } else {
     alert('Actually yea, the job went from 3 weeks to 4 years.');
   }
+}
 
-  for (let i = 0; i < 4; i++){
-    let favNumGuess = prompt(`${userName}, can you guess my favorite number? Try: ${i+1} out of 4`);
-    let favNumCleaned = Number(favNumGuess);
-    if (i == 3){
-      alert(`Sorry ${userName}, my favorite number is 13!`);
-    } else if (favNumCleaned < 13){
-      alert('Higher')
-    } else if (favNumCleaned > 13){
-      alert('Lower')
-    } else if (favNumCleaned === 13) {
-      alert('Wow! Yep 13 is my favorite number. Weird one huh?');
-      correctCounter++
-      break;
-    } 
+for (let i = 0; i < 4; i++) {
+  let favNumGuess = prompt(`${userName}, can you guess my favorite number? Try: ${i + 1} out of 4`);
+  let favNumCleaned = Number(favNumGuess);
+  if (i === 3) {
+    alert(`Sorry ${userName}, my favorite number is 13!`);
+  } else if (favNumCleaned < 13) {
+    alert('Higher');
+  } else if (favNumCleaned > 13) {
+    alert('Lower');
+  } else if (favNumCleaned === 13) {
+    alert('Wow! Yep 13 is my favorite number. Weird one huh?');
+    correctCounter++;
+    break;
   }
+}
 
-let topTen = ['almond danish','tri-tip','refund policy','polish hot dog','rotisserie chicken','cheesecake','pesto','5 layer chocolate cake','parmesean','ribs']
+let topTen = ['almond danish', 'tri-tip', 'refund policy', 'polish hot dog', 'rotisserie chicken', 'cheesecake', 'pesto', '5 layer chocolate cake', 'parmesean', 'ribs']
 
-for (let i = 0; i < 6; i++){
+for (let i = 0; i < 6; i++) {
   let costco = prompt(`Hey ${userName}, can you guess one of my top ten items from Costco? I'll give you six gueses! You've used ${i} so far`).toLowerCase();
-  
-  for (let j = 0; j < topTen.length; j++){
+
+  for (let j = 0; j < topTen.length; j++) {
     if (costco === topTen[j]) {
       alert(`Holy crap, yep that's one of my favorites! ${topTen} all made the list`);
       correctCounter++;
@@ -94,10 +104,10 @@ for (let i = 0; i < 6; i++){
   }
 }
 
-  if (correctCounter === 7){
-    alert('Wow 7/7?! We should be best friends! You wanna get bunk beds?!');
-  } else if (correctCounter === 0) {
-    alert('Sometimes I don\'t feel like you know me at all!');
-  } else {
-    alert(`Well ${userName}, ${correctCounter}/7 isn\'t too bad!`)
-  }
+if (correctCounter === 7) {
+  alert('Wow 7/7?! We should be best friends! You wanna get bunk beds?!');
+} else if (correctCounter === 0) {
+  alert('Sometimes I don\'t feel like you know me at all!');
+} else {
+  alert(`Well ${userName}, ${correctCounter}/7 isn\'t too bad!`);
+}
