@@ -17,8 +17,8 @@ let userName = userNameInProgress.charAt(0).toUpperCase() + userNameInProgress.s
 alert(`Hi ${userName}, welcome to the site! Let's play a game, answer the following question yes, no, y, or n.`);
 
 function greetUser(userName) {
-  document.write(`Hello ${userName}`)
-} 
+  document.write(`Hello ${userName}`);
+}
 
 function homeState() {
   let homeStateGuess = prompt('Am I from Colorado originally?').toLowerCase();
@@ -48,7 +48,7 @@ function favoriteShow() {
   } else {
     document.write('<span id="nx01Wrong">It\'s been a long road, geting from there to here.</span>');
   }
-} 
+}
 
 function jobEstimate() {
   let jobEstimate = prompt('Was my job in Washinton Permanent?').toLowerCase();
@@ -58,7 +58,7 @@ function jobEstimate() {
   } else {
     document.write('<span id="jobEstimateWrong">3 weeks</span>');
   }
-} 
+}
 
 function jobLength() {
   let jobEstimate = prompt('Was my job in Washinton Permanent?').toLowerCase();
@@ -68,4 +68,5 @@ function jobLength() {
   } else {
     document.write('<span id="jobEstimateWrong">3 weeks</span>');
   }
-} 
+}
+
