@@ -18,12 +18,14 @@ let correctCounter = 0;
 
 alert(`Hi ${userName}, welcome to the site! Let's play a game, answer the following question yes, no, y, or n.`);
 
-let homeStateGuess = prompt('Am I from Colorado originally?').toLowerCase();
-  if (homeStateGuess === 'n' || homeStateGuess ==='no') {
-    alert('Wow, yes I am actually from California!');
-    correctCounter++;
-  } else {
-    alert('Sorry! I\'m afraid I\'m from California.');
+function homeState(){
+  let homeStateGuess = prompt('Am I from Colorado originally?').toLowerCase();
+    if (homeStateGuess === 'n' || homeStateGuess ==='no') {
+      alert('Wow, yes I am actually from California!');
+      correctCounter++;
+    } else {
+      alert('Sorry! I\'m afraid I\'m from California.');
+    }
   }
 
   let currentStateGuess = prompt('Do I live in Washington Currently?').toLowerCase();
