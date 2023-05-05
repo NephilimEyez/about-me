@@ -18,13 +18,23 @@ let correctCounter = 0;
 
 alert(`Hi ${userName}, welcome to the site! Let's play a game, answer the following question yes, no, y, or n.`);
 
-let homeStateGuess = prompt('Am I from Colorado originally?').toLowerCase();
+homeState();
+currentState();
+favoriteShow();
+jobEstimate();
+jobLength();
+favNum();
+costcoTopTen();
+
+function homeState() {
+  let homeStateGuess = prompt('Am I from Colorado originally?').toLowerCase();
   if (homeStateGuess === 'n' || homeStateGuess ==='no') {
     alert('Wow, yes I am actually from California!');
     correctCounter++;
   } else {
     alert('Sorry! I\'m afraid I\'m from California.');
   }
+}
 
 function currentState() {
   let currentStateGuess = prompt('Do I live in Washington Currently?').toLowerCase();
@@ -66,39 +76,44 @@ function jobLength() {
   }
 }
 
-for (let i = 0; i < 4; i++) {
-  let favNumGuess = prompt(`${userName}, can you guess my favorite number? Try: ${i + 1} out of 4`);
-  let favNumCleaned = Number(favNumGuess);
-  if (i === 3) {
-    alert(`Sorry ${userName}, my favorite number is 13!`);
-  } else if (favNumCleaned < 13) {
-    alert('Higher');
-  } else if (favNumCleaned > 13) {
-    alert('Lower');
-  } else if (favNumCleaned === 13) {
-    alert('Wow! Yep 13 is my favorite number. Weird one huh?');
-    correctCounter++;
-    break;
-  }
-}
-
-let topTen = ['almond danish', 'tri-tip', 'refund policy', 'polish hot dog', 'rotisserie chicken', 'cheesecake', 'pesto', '5 layer chocolate cake', 'parmesean', 'ribs']
-
-for (let i = 0; i < 6; i++) {
-  let costco = prompt(`Hey ${userName}, can you guess one of my top ten items from Costco? I'll give you six gueses! You've used ${i} so far`).toLowerCase();
-
-  for (let j = 0; j < topTen.length; j++) {
-    if (costco === topTen[j]) {
-      alert(`Holy crap, yep that's one of my favorites! ${topTen} all made the list`);
+function favNum() {
+  for (let i = 0; i < 4; i++) {
+    let favNumGuess = prompt(`${userName}, can you guess my favorite number? Try: ${i + 1} out of 4`);
+    let favNumCleaned = Number(favNumGuess);
+    if (i === 3) {
+      alert(`Sorry ${userName}, my favorite number is 13!`);
+    } else if (favNumCleaned < 13) {
+      alert('Higher');
+    } else if (favNumCleaned > 13) {
+      alert('Lower');
+    } else if (favNumCleaned === 13) {
+      alert('Wow! Yep 13 is my favorite number. Weird one huh?');
       correctCounter++;
-      i = 6;
       break;
     }
   }
-  if (i < 5) {
-    alert('Sorry no that did not make my list.');
-  } else if (i === 5) {
-    alert(`Sorry none of those made my list. ${topTen} all made the list`);
+}
+
+// let topTen = ['almond danish', 'tri-tip', 'refund policy', 'polish hot dog', 'rotisserie chicken', 'cheesecake', 'pesto', '5 layer chocolate cake', 'parmesean', 'ribs']
+
+function costcoTopTen() {
+  let topTen = ['almond danish', 'tri-tip', 'refund policy', 'polish hot dog', 'rotisserie chicken', 'cheesecake', 'pesto', '5 layer chocolate cake', 'parmesean', 'ribs']
+  for (let i = 0; i < 6; i++) {
+    let costco = prompt(`Hey ${userName}, can you guess one of my top ten items from Costco? I'll give you six gueses! You've used ${i} so far`).toLowerCase();
+
+    for (let j = 0; j < topTen.length; j++) {
+      if (costco === topTen[j]) {
+        alert(`Holy crap, yep that's one of my favorites! ${topTen} all made the list`);
+        correctCounter++;
+        i = 6;
+        break;
+      }
+    }
+    if (i < 5) {
+      alert('Sorry no that did not make my list.');
+    } else if (i === 5) {
+      alert(`Sorry none of those made my list. ${topTen} all made the list`);
+    }
   }
 }
 
