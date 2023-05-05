@@ -94,8 +94,6 @@ function favNum() {
   }
 }
 
-// let topTen = ['almond danish', 'tri-tip', 'refund policy', 'polish hot dog', 'rotisserie chicken', 'cheesecake', 'pesto', '5 layer chocolate cake', 'parmesean', 'ribs']
-
 function costcoTopTen() {
   let topTen = ['almond danish', 'tri-tip', 'refund policy', 'polish hot dog', 'rotisserie chicken', 'cheesecake', 'pesto', '5 layer chocolate cake', 'parmesean', 'ribs']
   for (let i = 0; i < 6; i++) {
